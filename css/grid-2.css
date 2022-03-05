@@ -330,6 +330,35 @@ header p {
 	}
 }
 
+/* addding of blinking effects to image */
+
+#image-a:hover
+{
+	animation: pulse 1500ms infinite;
+}
+
+
+#image-b:hover
+{
+	animation: pulse 1500ms infinite;
+}
+
+@keyframes pulse
+{
+      
+  0%
+  {
+      box-shadow: #da0707   0 0 0 0  ;
+  }
+   75% 
+   {
+       box-shadow: #ff69b400 0 0 0 16px;
+   }
+}
+
+/* animation ends here */
+
+
 footer {
 	text-align: center;
 	font-size: 85%;
