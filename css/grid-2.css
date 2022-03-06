@@ -226,12 +226,15 @@ header p {
 }
 
 .box-a {
+	opacity: 0;
 	background-color: #e7eff5;
 	padding: 20px 20px 0 20px;
 	border: 2px solid #d3dee7;
 	margin-bottom: 30px;
 	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.8) , inset 10px 10px 5px rgba(0, 0, 0, 0.15) ;
 	border-radius: 7px 20px 7px  20px;
+	-webkit-animation: fadebounce 2s forwards;
+	animation: fadebounce 2s forwards;
 }
 
 @media screen and (max-width: 767px) {
@@ -359,6 +362,146 @@ header p {
 }
 
 /* animation ends here */
+
+/* adding animations to boxes */
+
+@-webkit-keyframes fadebounce 
+{
+	0%
+    {
+        opacity: 0;
+        transform: translateY(-200%);
+    }
+    
+    40%
+    {
+        
+        transform: translateY(0);
+    }
+
+    55%
+    {
+        
+        transform: translateY(-8px);
+    }
+    
+    70%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    85%
+    {
+        
+        transform: translateY(-4px);
+    }
+
+   100%
+   {
+       opacity: 1;
+       transform: translateY(0);
+   }	
+}
+
+@keyframes fadebounce 
+{
+	0%
+    {
+        opacity: 0;
+        transform: translateY(-200%);
+    }
+    
+    40%
+    {
+        
+        transform: translateY(0);
+    }
+
+    55%
+    {
+        
+        transform: translateY(-8px);
+    }
+    
+    70%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    85%
+    {
+        
+        transform: translateY(-4px);
+    }
+
+   100%
+   {
+       opacity: 1;
+       transform: translateY(0);
+   }	
+}
+
+.boxes :nth-child(2) .box-a
+{
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+
+.boxes :nth-child(3) .box-a
+{
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.boxes :nth-child(4) .box-a
+{   
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+/* boxes animation ends here */
+
+/* adding star with animation */
+.star
+{
+    width: 25%;
+    height: auto;
+    margin-top: 20px;
+    -webkit-animation: slidespin 2s forwards infinite alternate;
+    animation: slidespin 2s forwards infinite alternate;
+}
+
+@-webkit-keyframes slidespin {
+   50%
+   {
+       transform: translateX(150%) scale(0.5);
+   }
+   75%
+   {
+       transform: translateX(150%)  rotate(180deg)   scale(0.5);
+   }
+
+    100%
+    {
+        transform: translateX(300%) rotate(180deg)  ;
+    }
+}
+@keyframes slidespin {
+	50%
+	{
+		transform: translateX(150%) scale(0.5);
+	}
+	75%
+	{
+		transform: translateX(150%)  rotate(180deg)   scale(0.5);
+	}
+ 
+	 100%
+	 {
+		 transform: translateX(300%) rotate(180deg)  ;
+	 }
+ }
 
 
 footer {
